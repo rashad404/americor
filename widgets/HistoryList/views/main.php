@@ -19,14 +19,11 @@ use yii\widgets\Pjax;
     <div class="panel-body panel-body-selected">
 
         <div class="pull-sm-right">
-            <?php if (!empty($linkExport)) {
-                echo Html::a(Yii::t('app', 'CSV'), $linkExport,
-                    [
-                        'class' => 'btn btn-success',
-                        'data-pjax' => 0
-                    ]
-                );
-            } ?>
+            <?= Html::a(Yii::t('app', 'Export CSV'), $exportUrl, [
+                'class' => 'btn btn-success',
+                'data-pjax' => 0,
+                'target' => '_blank'
+            ]) ?>
         </div>
 
     </div>
